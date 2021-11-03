@@ -1,0 +1,239 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Kumbh Sans", sans-serif;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    
+}
+
+.contenedor{
+    /* max-width: 120rem;
+    width: 90%; */
+    width: min(70%, 40rem); /* Forma de agrupar lo anterior */
+    margin: 0 auto;
+}
+
+.tarjeta{
+    position: relative;
+    top: 10vh;
+    width: 65%;
+    height: 55rem;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 2rem;
+    overflow: hidden;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+.imagen{ 
+    position: absolute;
+}
+
+.imagen-borde{
+    top: -30rem;
+    left: -50rem;
+}
+
+.imagen-mujer{
+    top: 5rem;
+    left: -8rem;
+}
+
+.imagen__mujer-mobile{
+    display: none;
+}
+
+
+
+.box{
+    position: absolute;
+    left: 12vw;
+    top: 30vh;
+    z-index: 2;
+}
+
+
+.opciones{
+    margin-left: 7rem;
+    margin-top: 3rem;
+}
+
+
+.opciones h1{
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+.opcion{
+    font-size: 1.4rem;
+    display: grid;
+    grid-template-columns: 95% 5%;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    flex-wrap: nowrap;
+    z-index: 100;
+    width: 70%;
+}
+
+
+.opcion p{
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.opcion p:hover{
+    color: hsl(14, 88%, 65%);
+}
+
+.flecha{
+    width: 1rem;
+    height: 1rem;
+    margin-top: 1.6rem;
+    margin-right: 2rem;
+}
+
+.seleccionado{
+    font-weight: 900 !important;
+    
+}
+
+.seleccionado-flecha{
+    transform: scaleY(-1);
+}
+
+.not-visible{
+    display: none;
+}
+
+.texto{
+    color: hsl(0, 0%, 58%)
+}
+
+
+
+@media (max-width: 1000px) {
+
+    
+    .tarjeta{
+        grid-template-columns: 100%;
+        margin-top: 4rem;
+        width: 90%;
+        height: 70rem;
+    }
+    
+    .imagen-borde{
+        display: none;
+    }
+
+    .imagen-mujer{
+        display: none;
+    }
+
+    .box{
+        display: none;
+    }
+
+    .imagen__mujer-mobile{
+        display: block;
+        z-index: 200;
+        width: 28rem;
+        top: 1vw;
+        left: 32vw;
+    }
+    
+    .opciones{
+        text-align: center;
+        margin: 0;
+        margin-left: 12rem;
+    }
+
+    .opciones h1{
+        margin: 0;
+        text-align: center;
+        margin-right: 10rem;
+        margin-bottom: 2rem;
+    }
+
+    .question{
+        margin: 0;
+    }
+
+    .opcion{
+        margin-right: 0;
+    }
+
+    .flecha{
+        margin-right: 0;
+        margin-left: 4rem;
+    }
+    
+}
+
+
+
+
+@media (max-width: 450px) {
+    
+    .tarjeta{
+        grid-template-columns: 100%;
+        margin-top: 4rem;
+        width: 90%;
+        height: 70rem;
+    }
+    
+    .imagen-borde{
+        display: none;
+    }
+
+    .imagen-mujer{
+        display: none;
+    }
+
+    .box{
+        display: none;
+    }
+
+    .imagen__mujer-mobile{
+        display: block;
+        z-index: 200;
+        width: 28rem;
+        top: 1vw;
+        left: 15vw;
+    }
+    
+    .opciones{
+        text-align: center;
+        margin: 0;
+        margin-left: 4rem;
+    }
+
+    .question{
+        margin: 0;
+    }
+
+    .opcion{
+        margin-right: 0;
+    }
+
+    .flecha{
+        margin-right: 0;
+        margin-left: 4rem;
+    }
+}
